@@ -1,4 +1,5 @@
-Codes related to the K-Means clustering algorithm
+## 2. Variable's
+
 ![Screenshot from 2022-11-25 11-52-22](https://user-images.githubusercontent.com/37560890/209421961-8972cd4f-0fa3-4e38-9df4-f4a1f279247a.png)
 ![Screenshot from 2022-11-25 11-52-42](https://user-images.githubusercontent.com/37560890/209421962-95ac7004-3ef5-4d86-a472-1db3acc519dd.png)
 ![Screenshot from 2022-11-25 11-53-35](https://user-images.githubusercontent.com/37560890/209421963-54ec4d67-ca5c-4981-89ad-fd187b7ddca3.png)
