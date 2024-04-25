@@ -1,4 +1,4 @@
-## 01. Javascript lectures
+## 01. Part I lectures
 
 01. Introduction
 
