@@ -1,4 +1,4 @@
-## 01. Part I lectures
+## Part I lectures
 
 01. Introduction
 
