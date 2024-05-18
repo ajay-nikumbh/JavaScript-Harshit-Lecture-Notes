@@ -51,6 +51,18 @@ var first_name = "harshit";
 var firstName = "harshit"; 
 
 ```
+04. Let keyword
 
+```js
+// Let keyword 
+let firstName = "harshit";
+
+// Update the name
+firstName = "Mohit";
+
+// Log the first name
+console.log(firstName);
+
+```
 
 
