@@ -890,7 +890,306 @@ for(let i=0; i < fruits.length; i++){
 console.log(fruits2);
 ```
 
+31. Use the const for creating arrays
 
+```js
+
+// Use const for creating array
+// Heap memory ["apple", "mango"] 0x11
+
+// Use const for creating array
+// The use of the const will prevent the array from being modified
+// If we use the let for creating the array then we will be able to modify the the existing array
+// So when we will be using the reference types we are supposed to use the const instead of let
+const fruits = ["apple", "mango"];
+
+// Push array element into the fruits array 
+fruits.push("banana");
+
+// Output the fruit array
+console.log(fruits);
+
+``` 
+
+32. While loop in array's
+
+```js
+// While loop in array 
+const fruits = ["apple", "mango", "grapes"];
+
+// Declare the another array fruits2
+const fruits2 = [];
+
+// Declare the i element to 0
+let i = 0;
+
+// Use the while loop to iterate over the fruits
+while(i<fruits.length){
+
+    // Make the fruits array elements to the upper case
+    fruits2.push(fruits[i].toUpperCase());
+
+    // Increment the the i element
+    i++;
+}
+
+// Output the fruit2 array
+console.log(fruits2);
+```
+
+33. For of loop in array
+
+```js
+// For of loop in array
+
+// Declare the fruits array 
+const fruits = ["apple", "mango", "grapes", "fruit4", "fruit5"];
+
+// Declare the fruit2 array
+const fruits2 = [];
+
+// Use the for of loop in array
+for(let fruit of fruits){
+
+    // Make the fruit array elements into the uppercase
+    fruits2.push(fruit.toUpperCase());
+}
+
+// Output the fruits2 array
+console.log(fruits2);
+
+
+// For of loop in array use the simple for loop in array
+for(let i = 0; i<fruits.length; i++){
+
+    // Output the fruits array elements
+    console.log(fruits[i]);
+}
+
+// We normally use the for of loop in array
+// For of loop in array gives the direct element of the array and for in loop gives the index of the array element
+```
+
+34. For in loop in array
+
+```js
+// For in loop in array
+
+// Declare the fruits array
+const fruits = ["apple", "mango", "grapes", "fruit4", "fruit5"];
+
+// Declare the fruit2 array
+const fruits2 = [];
+
+// Use the for in loop in array
+for(let index in fruits){
+
+    // Make the uppercase elements of the array
+    fruits2.push(fruits[index].toUpperCase());
+}
+
+// Output the fruits2 array
+console.log(fruits2);
+```
+35. Array destructuring
+
+```js
+// Array destructuring 
+
+// Declare the myArray array
+const myArray = ["value1", "value2", "value3","value4"];
+
+// Extract the 0 and 1st index values from the array
+let myvar1 = myArray[0];
+let myvar2 = myArray[1];
+
+// Output the values of the array
+console.log("value of myvar1", myvar1);
+console.log("value of myvar2", myvar2);
+
+// Note: If you want to skip the value-2 then follow the syntax below
+// Here the 2nd index value is skipped because of the comma in between the values
+let [m1,,m3] = myArray
+
+// Use the array destructuring concept to store the myArray elements
+let [myva1, myva2, ...myNewArray] = myArray;
+
+// Output the values of the array 
+console.log("value of myvar1", myvar1);
+console.log("value of myvar2", myvar2);
+console.log(myNewArray);
+```
+36. Objects reference types
+
+```js
+// Objects reference type  
+
+/*
+
+Note: 
+
+1. Arrays are good but not sufficient for real world data 
+2. Objects store key value pairs, objects don't have index
+
+*/
+
+// How to create objects 
+// Create the person object
+const person = {
+    name: "harshit",
+    age: 22,
+    hobbies: ["guitar", "sleeping", "listening music"]
+}
+
+// Output the person object 
+console.log(person);
+
+// How to access data from objects 
+// Like dictionary in python use the keys to access the object elements
+console.log(person["name"]);
+console.log(person["age"]);
+console.log(person.hobbies);
+
+// How to add key value pair to objects
+person["person"] = "male";
+
+// Output the person object
+console.log(person);
+```
+
+37. Difference between dot and bracket notation
+
+```js
+// Difference between dot and bracket notaion
+
+// Define the key email
+const key = "email";
+
+// Define the person object key value pairs
+const person = {
+    name: "harshit",
+    age: 22,
+    "person hobbies": ["guitar", "sleeping", "listening music"]
+
+}
+
+// Output the person hobbies
+console.log(person["person hobbies"]);
+
+// Add the key to the person object
+person[key] = "harshitvashisth@gmail.com";
+
+// Log the person information
+console.log(person);
+
+```
+
+38. How to iterate over object's
+
+```js
+// How to iterate object 
+
+// Create the person object
+const person = {
+    name: "harshit",
+    age: 22,
+    "person hobbies": ["guitar", "sleeping", "listening music"]
+}
+
+
+// Use the for in loop to iterate over the person object
+for(let key in person){
+    
+    // Outptu the ans
+    console.log(`${key} : ${person[key]}`);
+    console.log(key," : " ,person[key]);
+}
+
+// Output the the type of the person object
+console.log(typeof (Object.keys(person)));
+
+// Check if the person object is an array
+const val = Array.isArray((Object.keys(person)));
+
+// Output
+console.log(val);
+
+
+// Use the for of loop to iterate over the the person objects
+for(let key of Object.keys(person)){
+
+    // Output the person
+    console.log(person[key]);
+}
+```
+39. Computed propertie's
+
+```js
+// Computed properties
+
+// Define the 2 keys
+const key1 = "objkey1";
+const key2 = "objkey2";
+
+// Define the 2 values
+const value1 = "myvalue1";
+const value2 = "myvalue2";
+
+// Here the problem is that key will not be computed so use the below method
+const obj1 = {
+    objkey1 : "myvalue1",
+    objkey2 : "myvalue2",
+}
+
+// Use the computed properties concept to create the obejct
+const obj2 = {
+    [key1] : value1,
+    [key2] : value2
+}
+
+// Doing it manually
+const obj = {};
+
+// Create
+obj[key1] = value1;
+obj[key2] = value2;
+
+// Output
+console.log(obj);
+
+
+```
+
+40. Spread operator in object's
+
+```js
+// Spread operator in objects
+
+// Define the object1
+const obj1 = {
+  key1: "value1",
+  key2: "value2",
+};
+
+// Define the object2
+const obj2 = {
+  key1: "valueUnique",
+  key3: "value3",
+  key4: "value4",
+};
+
+// Spread operator on the 2 objects
+// Here imp point is in both the 2 objects we have key 1 repeated so final value of the key 1 will be last object specified
+const newObject = { ...obj2, ...obj1, key69: "value69" };
+
+// Spread operator on the 2 arrays here the 0th index wil be the item1 and the 1st will be the item2
+const newObject1 = { ...["item1", "item2"] };
+
+// Here the index will be the key and value will the the letters
+const newObject2 = { ..."abcdefghijklmnopqrstuvwxyz" };
+
+
+```
 
 
 
