@@ -1191,6 +1191,125 @@ const newObject2 = { ..."abcdefghijklmnopqrstuvwxyz" };
 
 ```
 
+41. Object destructring
+
+```js
+// Object destructuring
+
+// Declare the band object
+const band = {
+  bandName: "led zepplin",
+  famousSong: "stairway to heaven",
+  year: 1968,
+  anotherFamousSong: "kashmir",
+};
+
+
+// Destructure the band object
+let { bandName, famousSong, ...restProps } = band;
+
+// Output the band object
+console.log(bandName);
+
+// Output the rest properties of the band object
+console.log(restProps);
+
+```
+
+42. Object inside array
+
+```js
+// objects inside array 
+// very useful in real world applications
+
+// Declare the array of the objects
+const users = [
+    {userId: 1,firstName: 'harshit', gender: 'male'},
+    {userId: 2,firstName: 'mohit', gender: 'male'},
+    {userId: 3,firstName: 'nitish', gender: 'male'},
+]
+
+// Use the for of loop
+for(let user of users){
+
+    // Output
+    console.log(user.firstName);
+}
+
+```
+
+43. Nested destructuring
+
+```js
+// Nested destructuring 
+
+// Declare the list of users
+const users = [
+
+    {userId: 1,firstName: 'harshit', gender: 'male'},
+    {userId: 2,firstName: 'mohit', gender: 'male'},
+    {userId: 3,firstName: 'nitish', gender: 'male'},
+]
+
+// Normal users destructuring
+const [user1,user2,user3]= users
+
+// Print the user1
+console.log(user1)
+
+// Object destructuring and changing the user first name to user1firstName
+const [{firstName: user1firstName, userId}, , {gender: user3gender}] = users;
+
+// Print the name
+console.log(user1firstName);
+
+// Print the userId
+console.log(userId);
+
+// Print the user3 gender
+console.log(user3gender);
+```
+44. Function's
+
+```js
+// 1. Define the  functions
+function printHello(){
+    
+    // Print the message to the console
+    console.log("Hello");
+}
+
+// Calling the printHello method and printing it to the console
+console.log(printHello());
+
+
+
+// 2. Function expression
+const printNumbers = function(numbers){
+
+    // Print the numbers 
+    return numbers
+}
+
+// Calling the printNumbers method and printing it to the console
+console.log(printNumbers(3));
+
+
+
+
+// 3. Arrow function
+const printArrow = () =>{
+    
+    console.log("Arrow");
+}
+
+// Calling the printArrow method and printing it to the console
+console.log(printArrow());
+
+```
+
+
+
 
 
 
