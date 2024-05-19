@@ -544,6 +544,355 @@ while(i<=9){
 console.log(`Current value of i is ${i}`);
 
 ```
+21. While loop example
+
+```js
+// While loop example 
+
+// Declare the num variable
+let num = 100;
+
+// Define the total
+let total = 0; //1 + 2 +3
+
+// Define the i variable
+let i = 0;
+
+// Use the while loop
+while(i<=100){
+    
+    // Update the total variable
+    total = total + i;
+    
+    // Update the i variable 
+    i++;
+}
+
+// Return the total variable as output
+console.log(total);
+
+// Use the formula below to compute the sum of the variables
+let total1 = (num*(num+1))/2;
+
+// Return the total1 variable as output
+console.log(total1);
+```
+
+22. Var and let uses
+    
+```js
+/*
+Note: 
+
+1. If you use the let keyword then you will not be able to to access the value of the the i outisde the method.
+2. If you use the var keyword then you will get the value of the of the i outisde the method also.
+
+*/
+
+// Introduction to the for loop
+for(let i = 0;i<=9;i++){
+    
+    // Output the i value
+    console.log(i);
+}
+
+// Output the value of the i variable
+console.log("value of i is ",i);
+```
+
+23. For loop example
+
+```js
+// For loop example
+
+// Define the total variable
+let total = 0;
+
+// Define the num variable
+let num = 100;
+
+// Use the for loop variable
+for(let i = 1; i<=num; i++){
+    
+    // Compute the total
+    total = total + i;
+}
+
+// Output the total variable
+console.log(total);
+```
+24. Break & continue keyword
+
+```js
+// Break keyword and Continue keyword 
+
+// For loop
+for(let i = 1; i<=10; i++){
+    
+    // Break if i == 4 then break keyword
+    if(i===4){
+        break;
+    }
+
+    // Output
+    console.log(i);
+}
+
+
+// Continue keyword
+for(let i = 1; i<=10; i++){
+    
+    // Break if i == 4 then continue with the current iteration
+    if(i===4){
+        continue;
+    }
+
+    // Output
+    console.log(i);
+}
+
+```
+25. Do while loop
+    
+```js
+// Do while loop
+
+// Loop through the iteration 
+while(i<=9){
+
+    // Output the current iteration
+    console.log(i);
+    
+    // Increment the iteration counter
+    i++;
+}
+
+
+// Declare the i variable
+let i = 10;
+
+// Use the do while loop
+do{
+
+    // Output the current iteration
+    console.log(i);
+
+    // Increment the iteration counter
+    i++;
+
+}while(i<=9);
+
+// Output the i variable value
+console.log("value of i is ", i);
+```
+26. Introduction to array's
+    
+
+```js
+// Introduction to arrays - reference type 
+// Here the array is the reference type and its a type of the object.
+// Define the fruits array
+let fruits1 = ["apple", "mango", "grapes"];
+
+// Define the number's array
+let numbers = [1,2,3,4];
+
+// Define the mixed array
+let mixed = [1,2,2.3, "string", null, undefined];
+
+// Ouput the respective array
+console.log(mixed);
+
+// Ouput the respective array
+console.log(numbers);
+
+// Ouput the respective fruits index array
+console.log(fruits1[2]);
+
+// Define the fruits array
+let fruits = ["apple", "mango", "grapes"];
+
+// Output the fruits array
+console.log(fruits);
+
+// Define the object literal
+let obj = {}; 
+
+// Update the first index of the fruits array
+fruits[1] = "banana";
+console.log(fruits);
+
+// Output the type of the fruit array is the object because its the reference type
+console.log(typeof fruits);
+
+// Output the type of the object 
+console.log(typeof obj);
+
+// Check if the array is really an array
+console.log(Array.isArray(fruits));
+
+// Check if the object is really an object
+console.log(Array.isArray(obj));
+
+```
+
+27. Array push, pop, shift and unshift
+
+```js
+// Array - push, pop, shift, unshift 
+
+// Define the fruits array
+let fruits = ["apple", "mango", "grapes"];
+console.log(fruits);
+
+// Use the push function to push the elements at end of the array
+fruits.push("banana");
+console.log(fruits);
+
+
+// Use the pop function to pop to remove the elements at the end of the array
+let poppedFruit = fruits.pop();
+console.log(fruits);
+console.log("popped fruits is", poppedFruit);
+
+// Use the unshift method to add the elements at the start of the array
+fruits.unshift("banana");
+fruits.unshift("myfruit");
+console.log(fruits);
+
+// Use the shift function to remove the elements from the start of the array
+let removedFruit = fruits.shift();
+console.log(fruits);
+console.log("removed fruits is ", removedFruit);
+
+
+/*
+Note: Push and pop is faster than shift and unshift
+*/
+```
+
+28. Primitive vs reference data types
+
+```js
+// Primitve vs reference data types
+
+// Declare the num1
+let num1 = 6;
+
+// Store the num1 into the num2
+let num2 = num1;
+
+// Output the num1 and num2
+console.log("value is num1 is", num1);
+console.log("value is num2 is", num2);
+
+// Increment the num1 by 1
+num1++;
+
+// Outptu the num1 and num2
+console.log("After incrementing num1")
+console.log("Value is num1 is", num1);
+console.log("Value is num2 is", num2);
+
+
+// Reference types 
+
+// Declare the array 1
+let array1 = ["item1", "item2"];
+
+// Store the array1 into the array2
+let array2 = array1;
+
+// Output the array1 and array2
+console.log("array1", array1);
+console.log("array2", array2);
+
+// Push the item3 into the array1
+array1.push("item3");
+
+// Print the output
+console.log("after pushing element to array 1");
+console.log("array1", array1);
+console.log("array2", array2);
+```
+
+29. How to clone the array
+
+```js
+// How to clone array 
+
+// 3 Methods to clone array elements - Slice methods, Concat method and Spread method
+// Method 1 - Clone array using the slice method
+let arr_c1= array1.slice(0)
+
+// Method 2 - Clone array using the concat method
+let arr_c2= [].concat(array1);
+
+// Method 3 - Clone array using the spread operator
+let arr_c3= [...array1];
+
+// Declare the array1
+let array1 = ["item1", "item2"];
+
+// Declare the array22
+let array22 = ["item1", "item2"];
+
+// Push one element to the array1
+array1.push("item33"); 
+
+// Print the 2 arrays
+console.log(array1)
+console.log(array22)
+
+// Compare the 2 arrays
+console.log(array1===array2);
+
+// Use the slice and concat functions to add the array elements together 
+// Here we can use both the slice and concat functions together to perform the operations
+let arra = array1.slice(0).concat(["item3", "item4"]);
+
+// Use the concat function to add the array1 and then extra elements to the array
+let array_ce = [].concat(array1,["item3", "item4"]);
+
+// Brand new array elements
+let oneMoreArray = ["item3", "item4"]
+let new_speread_operator_array = [...array1, ...oneMoreArray];
+
+
+
+```
+
+30. For loop in array
+
+```js
+// For loop in array 
+
+// Declare the fruits array
+let fruits = ["apple", "mango", "grapes", "banana"];
+
+// Output the fruit array length
+console.log(fruits.length);
+
+// Getting the fruits array element using the length function
+console.log(fruits[fruits.length-2]);
+
+// Declare the fruits2 array
+let fruits2 = [];
+
+// Use the for loop to convert the fruit array into the uppercase string
+for(let i=0; i < fruits.length; i++){
+
+    // Convert the fruit array into the uppercase string
+    fruits2.push(fruits[i].toUpperCase());
+}
+
+// Output the fruit2 array
+console.log(fruits2);
+```
+
+
+
+
 
 
 
